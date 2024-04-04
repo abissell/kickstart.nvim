@@ -885,4 +885,9 @@ require('lazy').setup({
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
+-- Disable wrapping of long lines but keep minimum number of columns around cursor for context
+vim.opt.wrap = false
+vim.opt.sidescroll = 1
+vim.opt.sidescrolloff = 20
+
 require 'custom.keymap'
