@@ -190,6 +190,12 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Some non-default Netrw settings
+vim.g.netrw_keepdir = 0 -- Keep the current directory and the browsing directory synced
+vim.g.netrw_localmkdir = 'mkdir -p'
+vim.g.netrw_localrmdir = 'rm -r'
+-- vim.g.netrw_localcopycmd = 'cp -R' -- This is busted for some reason
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
