@@ -191,7 +191,8 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Some non-default Netrw settings
-vim.g.netrw_keepdir = 0 -- Keep the current directory and the browsing directory synced
+-- Switched off keepdir since it interferes with file search
+-- vim.g.netrw_keepdir = 0 -- Keep the current directory and the browsing directory synced
 vim.g.netrw_localmkdir = 'mkdir -p'
 vim.g.netrw_localrmdir = 'rm -r'
 -- vim.g.netrw_localcopycmd = 'cp -R' -- This is busted for some reason
@@ -859,7 +860,7 @@ require('lazy').setup({
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
