@@ -918,4 +918,9 @@ vim.g.netrw_localmkdir = 'mkdir -p'
 vim.g.netrw_localrmdir = 'rm -r'
 -- vim.g.netrw_localcopycmd = 'cp -R' -- This is busted for some reason
 
+-- Disable wrapping of long lines but keep minimum number of columns around cursor for context
+vim.opt.wrap = false
+vim.opt.sidescroll = 1
+vim.opt.sidescrolloff = 20
+
 require 'custom.keymap'
