@@ -916,4 +916,10 @@ require('lazy').setup({
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
+-- Some non-default Netrw settings
+vim.g.netrw_keepdir = 0 -- Keep the current directory and the browsing directory synced
+vim.g.netrw_localmkdir = 'mkdir -p'
+vim.g.netrw_localrmdir = 'rm -r'
+-- vim.g.netrw_localcopycmd = 'cp -R' -- This is busted for some reason
+
 require 'custom.keymap'
